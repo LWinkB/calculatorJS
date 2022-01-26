@@ -10,7 +10,6 @@ const equalEl = document.querySelector(".equal");
 const clearAllEl = document.querySelector(".all-clear");
 const clearLastEl = document.querySelector(".last-entety-clear");
 
-
 let dis1Num = "";
 let dis2Num = "";
 let result = null;           //Variáveis globais
@@ -129,7 +128,7 @@ clearLastEl.addEventListener("click", (e) => {
 });
 
 window.addEventListener("keydown", (e) => {
-    console.log("teste");
+
     if (
         e.key === "0" ||
         e.key === "1" ||
@@ -161,13 +160,15 @@ window.addEventListener("keydown", (e) => {
         clickOperation("÷");
     } else if (e.key === "Enter" || e.key === "=") {
         clickEqual();
+    } else if (e.key === "Backspace"){
+        clearOneEl();
     }
 
 })
 
 function clickButtonEl(key) {
     numbersEl.forEach(button => {
-        if (button.innerHTML == key) {  //verifica se temos a tecla pressionada na calculadora
+        if (button.innerHTML === key) {  //verifica se temos a tecla pressionada na calculadora
             button.click(); //Se sim, clique.
         }
 
@@ -188,6 +189,13 @@ function clickOperation(key) {
 
 function clickEqual() {
     equalEl.click()
+
+}
+
+
+function clearOneEl() {
+    display2El.innerText = "";
+    dis2Num = "";
 
 }
 
