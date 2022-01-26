@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial;
+
+}
+section{
+    background-image: linear-gradient(45deg, #0c6d0c, #6fe56f);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    max-width: 350px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.display{
+    background-color: #cceecc;
+    height: 70px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 25px;
+    color: black;
+    position: relative;
+}
+.display-1{
+    opacity: .4;
+    font-size: 18px;
+    height: 20px;
+    overflow: hidden;
+}
+.temp-result{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    font-size: 20px;
+    opacity: .3;
+
+}
+.all_buttons{
+     color: whitesmoke;
+    display: grid;
+    grid-template: repeat(5,1fr) / repeat(4,1fr);
+    border-top: none;
+    border-left: none;
+
+
+}
+.button{
+    border: .1px #383636;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    border-top: none;
+    border-left: none;
+}
+.button:hover{
+    background-color: #100f0f;
+}
+
+.button.all-clear {
+    padding-top: 20px;
+    border-top: none;
+    border-left: none;
+
+}
+.button.all-clear:hover{
+    background: none;
+}
+
+.all-clear div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #31d47d;
+
+}
+
+.button.last-entety-clear{
+    border-top: none;
+    border-left: none;
+   align-items: end;
+}
+.button.last-entety-clear:hover{
+    background:none;
+}
+.button.last-entety-clear div:hover{
+    background-color: #e2e233;
+}
+.button.last-entety-clear div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 60px;
+    border-radius: 35%;
+    background-color: #cdcd26;
+    font-size: 15px;
+    color: black;
+}
+.other.button{
+    align-items: end;
+}
+.other.button div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 60px;
+    border-radius: 35%;
+    background-color: #cdcd26;
+    font-size: 15px;
+    color: black;
+}
+.other.button:hover {
+    background: none;
+}
+.other.button div:hover {
+    background-color: #e2e233;
+}
+
+.button.operation.plus{
+
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 90%;
+    background-color: #31d47d;
+    font-size: 40px;
+    border: none;
+    grid-column: 4;
+    grid-row: 5/8;
+
+
+
+
+}
+
+
+
+
+
+
