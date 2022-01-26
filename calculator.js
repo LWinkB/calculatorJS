@@ -9,6 +9,7 @@ const operationEl = document.querySelectorAll(".operation");  //EL = element
 const equalEl = document.querySelector(".equal");
 const clearAllEl = document.querySelector(".all-clear");
 const clearLastEl = document.querySelector(".last-entety-clear");
+const turnoff = document.querySelector(".off");
 
 let dis1Num = "";
 let dis2Num = "";
@@ -118,6 +119,18 @@ clearAllEl.addEventListener("click", (e) => {
     result = "";
     tempResEl.innerHTML = "0";
 
+
+})
+
+turnoff.addEventListener("click", (e) => {
+
+    display1El.innerHTML = "";
+    display2El.innerText = "";
+    dis1Num = "";
+    dis2Num = "";
+    result = "";
+    tempResEl.innerHTML = "";
+
 })
 
 
@@ -160,7 +173,7 @@ window.addEventListener("keydown", (e) => {
         clickOperation("÷");
     } else if (e.key === "Enter" || e.key === "=") {
         clickEqual();
-    } else if (e.key === "Backspace"){
+    } else if (e.key === "Backspace") {
         clearOneEl();
     }
 
@@ -186,6 +199,7 @@ function clickOperation(key) {
     })
 
 }
+
 
 function clickEqual() {
     equalEl.click()
